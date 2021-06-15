@@ -4,7 +4,7 @@
 
 ## 1. Einfuehrung
 
-<p>C# ist eine typsichere, objektorientierte Allzweck-Programmiersprache. Historysch wurde in C# fast exklusiv für Windows entwickelt. Durch Xamarin ist es inzwischen aber auch möglich, für macOS, iOS und Android zu entwickeln. Zudem gibt es mit .NET Core auch offizielle Unterstützung für GNU/Linux und macOS [1].<p>
+<p>C# ist eine typsichere, objektorientierte Allzweck-Programmiersprache. Historisch wurde in C# fast exklusiv für Windows entwickelt. Durch Xamarin ist es inzwischen aber auch möglich, für macOS, iOS und Android zu entwickeln. Zudem gibt es mit .NET Core auch offizielle Unterstützung für GNU/Linux und macOS [1].<p>
 
 <p>In der normalen Betriebsart werden C#-Quelltexte in eine mist als IL bezeichnete Zwischensprache übersetzt, die (normalerweise durch einen JIT-Compiler) auf allen Plattformen ausgeführt werden kann, auf denen eine geeignete Laufzeitumgebung KAUDERWELSCH zur Verfügung steht. Darüber hinaus gibt es verschiedene Ansätze der AOT-Compilierung um plattformspezifischen Maschinencode vorab zu erzeugen.<p>
 
