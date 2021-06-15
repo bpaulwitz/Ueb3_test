@@ -4,7 +4,7 @@
 
 ## 1. Einfuehrung
 
-<p>C# ist eine typsichere, objektorientierte Allzweck-Programmiersprache. Historisch wurde in C# fast exklusiv für Windows entwickelt. Durch Xamarin ist es inzwischen aber auch möglich, für macOS, iOS und Android zu entwickeln. Zudem gibt es mit .NET Core auch offizielle Unterstützung für GNU/Linux und macOS [1].<p>
+<p>C# ist eine typsichere, objektorientierte Allzweck-Programmiersprache. Historysch wurde in C# fast exklusiv für Windows entwickelt. Durch Xamarin ist es inzwischen aber auch möglich, für macOS, iOS und Android zu entwickeln. Zudem gibt es mit .NET Core auch offizielle Unterstützung für GNU/Linux und macOS [1].<p>
 
 <p>In der normalen Betriebsart werden C#-Quelltexte in eine mist als IL bezeichnete Zwischensprache übersetzt, die (normalerweise durch einen JIT-Compiler) auf allen Plattformen ausgeführt werden kann, auf denen eine geeignete Laufzeitumgebung KAUDERWELSCH zur Verfügung steht. Darüber hinaus gibt es verschiedene Ansätze der AOT-Compilierung um plattformspezifischen Maschinencode vorab zu erzeugen.<p>
 
@@ -35,3 +35,31 @@
 |                        <p align = "center">Abb1. C#-Logo <p>                         |
 
 <br>
+
+
+## 4. Hello-world codebeispiel
+
+```c#
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Hello World!");
+    }
+  }
+}
+```
+
+_Referenzen_
+
+[1] Bis hier her siehe:
+
+- Joseph Albahari; Ben Albahari: C# 6.0 in a Nutshell. The Definitive Reference. 6. Auflage. <br> O'Reilly, Sebastopol 2016, ISBN 978-1-4919-2706-9, S. 1–6.
+- Joseph Albahari; Ben Albahari: C# 6.0 Pocket Reference Instant Help for C# 6.0 Programmers.<br> O'Reilly, Sebastopol 2015,
+  ISBN 978-1-4919-2741-0, S. 1.
+
+[2] [International Organization for Standardizatio](<http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip>)
