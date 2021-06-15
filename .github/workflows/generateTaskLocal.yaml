@@ -1,0 +1,36 @@
+name: Task generator 
+
+on: push
+
+jobs:
+  log-github-event-goodies:
+    name: "Provide task randomly"
+    runs-on: ubuntu-latest
+    if: github.event.pusher.name == 'github-classroom[bot]'
+    steps:
+      - name: Check out current repository
+        uses: actions/checkout@v2
+        
+      - name: Run generation script
+        env:
+          MESSAGE: ${{github.event.head_commit.message}}
+          USER: ${{github.event.pusher.name}}
+        run: |
+             python3 .github/workflows/InitiallySelectTask.py
+             TASK=$(cat ./.content/task.log)
+             echo "TASKFILE=$TASK" >> $GITHUB_ENV
+             echo "${{ env.TASKFILE }}"
+          
+      - name: Commit files
+        run: |
+             git config --local user.email "action@github.com"
+             git config --local user.name "GitHub Action"
+             git add README.md
+             git status 
+             git commit -m "Inital task selection - ${{ env.TASKFILE }}" || echo "Task unchanged"
+             
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             branch: main
